@@ -11,7 +11,7 @@
 (async () => {
   const key = new URLSearchParams(location.search).get("go");
   const msg = document.getElementById("msg");
-  if (!key) { msg.innerHTML = "No key given. Links managed at <a href='https://github.com/lubianat/links'>this repository</a>."; return; }
+    if (!key) { msg.innerHTML = "No key given. Links managed at <a href='https://github.com/lubianat/links'>this repository</a>."; return; }
   try {
     const res = await fetch("links.yaml", { cache: "no-cache" });
     const links = jsyaml.load(await res.text());
